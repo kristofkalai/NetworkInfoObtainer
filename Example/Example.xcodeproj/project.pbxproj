@@ -601,7 +601,7 @@
 			repositoryURL = "https://github.com/stateman92/NetworkInfoObtainer";
 			requirement = {
 				kind = exactVersion;
-				version = 0.0.2;
+				version = 0.0.4;
 			};
 		};
 		58497FFB2B66F0DC000197C4 /* XCRemoteSwiftPackageReference "Reachability" */ = {

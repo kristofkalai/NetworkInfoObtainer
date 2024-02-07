@@ -26,6 +26,12 @@ struct ContentView: View {
         ),
         networkReachability: try? Reachability()
     )
+    private let reachabilityImplProvider = NetworkInfoProviderImpl(
+        ipAddressChangeNotifier: IpAddressChangeNotifierImpl(
+            networkInfoObtainer: NetworkInfoObtainerImpl()
+        ),
+        networkReachability: NetworkReachabilityImpl()
+    )
 
     var body: some View {
         VStack {
@@ -49,6 +55,11 @@ struct ContentView: View {
             try? reachabilityProvider.startNotifier()
             reachabilityProvider.ipAddressDidChange = {
                 print("ReachabilityProvider info: \($0)")
+            }
+
+            try? reachabilityImplProvider.startNotifier()
+            reachabilityImplProvider.ipAddressDidChange = {
+                print("ReachabilityImplProvider info: \($0)")
             }
         }
     }

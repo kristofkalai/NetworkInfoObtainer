@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stateman92/NetworkInfoObtainer",
       "state" : {
-        "revision" : "a13cb3ea937510cff27998b573cef3971e8aa15f",
-        "version" : "0.0.2"
+        "revision" : "741f6153a7deb2c26ee93c857bce77783b37d3d0",
+        "version" : "0.0.4"
       }
     },
     {
